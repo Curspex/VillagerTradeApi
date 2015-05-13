@@ -2,10 +2,10 @@ package com.gmail.fedmanddev;
 
 import org.bukkit.plugin.java.*;
 import org.bukkit.entity.*;
-import org.bukkit.craftbukkit.v1_7_R3.entity.*;
+import org.bukkit.craftbukkit.v1_7_R4.entity.*;
 import java.lang.reflect.*;
-import org.bukkit.craftbukkit.v1_7_R3.inventory.*;
-import net.minecraft.server.v1_7_R3.*;
+import org.bukkit.craftbukkit.v1_7_R4.inventory.*;
+import net.minecraft.server.v1_7_R4.*;
 
 public final class VillagerTradeApi extends JavaPlugin
 {
