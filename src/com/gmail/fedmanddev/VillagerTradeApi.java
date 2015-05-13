@@ -20,8 +20,7 @@ public final class VillagerTradeApi extends JavaPlugin
 		try {
 			final Field recipes = entityVillager.getClass().getDeclaredField("bu");
 			recipes.setAccessible(true);
-			final MerchantRecipeList list = new MerchantRecipeList();
-			recipes.set(entityVillager, list);
+			recipes.set(entityVillager, new MerchantRecipeList());
 		}
 		catch (Exception exc) {
 			exc.printStackTrace();
