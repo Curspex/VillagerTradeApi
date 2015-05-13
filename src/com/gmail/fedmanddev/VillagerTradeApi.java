@@ -1,11 +1,16 @@
 package com.gmail.fedmanddev;
 
-import org.bukkit.plugin.java.*;
-import org.bukkit.entity.*;
-import org.bukkit.craftbukkit.v1_7_R4.entity.*;
-import java.lang.reflect.*;
-import org.bukkit.craftbukkit.v1_7_R4.inventory.*;
-import net.minecraft.server.v1_7_R4.*;
+import java.lang.reflect.Field;
+
+import net.minecraft.server.v1_7_R4.EntityVillager;
+import net.minecraft.server.v1_7_R4.ItemStack;
+import net.minecraft.server.v1_7_R4.MerchantRecipe;
+import net.minecraft.server.v1_7_R4.MerchantRecipeList;
+
+import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.craftbukkit.v1_7_R4.entity.CraftVillager;
+import org.bukkit.craftbukkit.v1_7_R4.inventory.CraftItemStack;
+import org.bukkit.entity.Villager;
 
 public final class VillagerTradeApi extends JavaPlugin
 {

@@ -1,6 +1,6 @@
 package com.gmail.fedmanddev;
 
-import org.bukkit.inventory.*;
+import org.bukkit.inventory.ItemStack;
 
 public final class VillagerTrade
 {
