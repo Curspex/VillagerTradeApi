@@ -15,39 +15,60 @@ import org.bukkit.entity.Villager;
 public final class VillagerTradeApi extends JavaPlugin
 {
 
-	public static void clearTrades(final Villager villager) {
+
+	public static void clearTrades(final Villager villager)
+	{
+
 		final EntityVillager entityVillager = ((CraftVillager)villager).getHandle();
-		try {
+
+		try
+		{
 			final Field recipes = entityVillager.getClass().getDeclaredField("bu");
 			recipes.setAccessible(true);
 			recipes.set(entityVillager, new MerchantRecipeList());
 		}
+
 		catch (Exception exc) {
 			exc.printStackTrace();
 		}
+
 	}
 
-	public static void addTrade(final Villager villager, final VillagerTrade villagerTrade) {
+
+	public static void addTrade(final Villager villager, final VillagerTrade villagerTrade)
+	{
+
 		final EntityVillager entityVillager = ((CraftVillager)villager).getHandle();
-		try {
+
+		try
+		{
 			final Field recipes = entityVillager.getClass().getDeclaredField("bu");
 			recipes.setAccessible(true);
 			final MerchantRecipeList list = (MerchantRecipeList)recipes.get(entityVillager);
 			final ItemStack primaryItem = CraftItemStack.asNMSCopy(VillagerTrade.getPrimaryItem(villagerTrade));
-			if (VillagerTrade.hasSecondaryItem(villagerTrade)) {
+
+			if (VillagerTrade.hasSecondaryItem(villagerTrade))
+			{
 				final ItemStack secondaryItem = CraftItemStack.asNMSCopy(VillagerTrade.getSecondaryItem(villagerTrade));
 				final ItemStack rewardItem = CraftItemStack.asNMSCopy(VillagerTrade.getRewardItem(villagerTrade));
 				list.a(new MerchantRecipe(primaryItem, secondaryItem, rewardItem));
 			}
-			else {
+
+			else
+			{
 				final ItemStack rewardItem = CraftItemStack.asNMSCopy(VillagerTrade.getRewardItem(villagerTrade));
 				list.a(new MerchantRecipe(primaryItem, rewardItem));
 			}
+
 			recipes.set(entityVillager, list);
 		}
-		catch (Exception exc) {
+
+		catch (Exception exc)
+		{
 			exc.printStackTrace();
 		}
+
 	}
+
 
 }
