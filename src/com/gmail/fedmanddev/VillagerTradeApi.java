@@ -9,10 +9,7 @@ import net.minecraft.server.v1_7_R4.*;
 
 public final class VillagerTradeApi extends JavaPlugin
 {
-    public void onEnable() {
-        System.out.print("[VillagerTradeApi] Enabled VillagerTradeApi by Fedmand");
-    }
-    
+
     public static void clearTrades(final Villager villager) {
         final EntityVillager entityVillager = ((CraftVillager)villager).getHandle();
         try {
@@ -49,4 +46,5 @@ public final class VillagerTradeApi extends JavaPlugin
             exc.printStackTrace();
         }
     }
+
 }
