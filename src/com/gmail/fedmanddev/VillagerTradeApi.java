@@ -32,14 +32,14 @@ public final class VillagerTradeApi extends JavaPlugin
             final Field recipes = entityVillager.getClass().getDeclaredField("bu");
             recipes.setAccessible(true);
             final MerchantRecipeList list = (MerchantRecipeList)recipes.get(entityVillager);
-            if (VillagerTrade.hasItem2(villagerTrade)) {
-                final ItemStack item1 = CraftItemStack.asNMSCopy(VillagerTrade.getItem1(villagerTrade));
-                final ItemStack item2 = CraftItemStack.asNMSCopy(VillagerTrade.getItem2(villagerTrade));
+            if (VillagerTrade.hasSecondaryItem(villagerTrade)) {
+                final ItemStack item1 = CraftItemStack.asNMSCopy(VillagerTrade.getPrimaryItem(villagerTrade));
+                final ItemStack item2 = CraftItemStack.asNMSCopy(VillagerTrade.getSecondaryItem(villagerTrade));
                 final ItemStack rewardItem = CraftItemStack.asNMSCopy(VillagerTrade.getRewardItem(villagerTrade));
                 list.a(new MerchantRecipe(item1, item2, rewardItem));
             }
             else {
-                final ItemStack item1 = CraftItemStack.asNMSCopy(VillagerTrade.getItem1(villagerTrade));
+                final ItemStack item1 = CraftItemStack.asNMSCopy(VillagerTrade.getPrimaryItem(villagerTrade));
                 final ItemStack rewardItem2 = CraftItemStack.asNMSCopy(VillagerTrade.getRewardItem(villagerTrade));
                 list.a(new MerchantRecipe(item1, rewardItem2));
             }
