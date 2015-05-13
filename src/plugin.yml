@@ -1,4 +1,17 @@
+##     ## ########       ###    ########  ####
+##     ##    ##         ## ##   ##     ##  ##
+##     ##    ##        ##   ##  ##     ##  ##
+##     ##    ##       ##     ## ########   ##
+ ##   ##     ##       ######### ##         ##
+  ## ##      ##       ##     ## ##         ##
+   ###       ##       ##     ## ##        ####
+
 name: VillagerTradeApi
 main: com.gmail.fedmanddev.VillagerTradeApi
-version: 0.2
-author: Fedmand
+version: 1.0.3
+authors: [Fedmand, GitHub/Curspex, Omnivion]
+description: Villager trading api
+database: false
+website: http://cur.sx
+dev-url: https://github.com/Curspex/VillagerTradeApi
+original: http://dev.bukkit.org/bukkit-plugins/villager-trade-api/
