@@ -7,9 +7,10 @@
    ###       ##       ##     ## ##        ####
 
 name: VillagerTradeApi
-main: com.gmail.fedmanddev.VillagerTradeApi
+main: com.gmail.fedmanddev.villagerapi.VillagerTradeApi
 version: 1.0.3
-authors: [Fedmand, GitHub/Curspex, Omnivion]
+author: [Fedmand]
+authors: [GitHub/Curspex, Omnivion]
 description: Villager trading api
 database: false
 website: http://cur.sx
